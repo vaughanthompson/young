@@ -1,0 +1,400 @@
+
+
+//core layout
+@media ttrigger  
+    body > header
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        padding: 0 padStd
+        width:100%
+        //border-top: 1px solid whiteAlp50
+        
+    body > header.fixed
+        //min-height: navHeightL
+        position: fixed
+        z-index: 2000
+        bottom: 0
+
+    body > header.sticky
+        min-height: navHeight
+        position: fixed
+        z-index: 5000
+        padding: padXXS*0.8 0
+        display: none
+        background-color: white
+    body > header.stickyStatic
+        min-height: navHeight
+        position: fixed
+        z-index: 5000
+        padding: padXXS*0.8 0
+        background-color: white
+    body > header > *
+        margin-left: marStd*1.5
+        margin-right: marStd*1.5
+    body > header.fixed nav.navTrigger
+        display: flex
+        width:100%
+        column-gap: 2.5em
+    body > header.fixed nav.navTrigger > *
+        flex: 1 1 12.5%
+        text-decoration: none
+
+    body > header.fixed nav.navTrigger > *:last-child
+        text-align: right
+        text-decoration: underline
+        border-bottom: none !important
+        font-weight: 400
+
+    
+
+
+
+
+//footer
+body > footer
+    background-color: brand1
+    color: white
+body > footer .icon
+    display: inline-flex
+    font-size: 1.2em
+    width:25px
+    height: 25px
+    justify-content: center
+    background: none
+    padding: 0
+body > footer > div
+    display: flex
+    flex-wrap: nowrap
+    flex-direction: column
+    justify-content: space-around
+body > footer div > div:not(.siteCredit)
+    padding: padStd*0.5 0
+body > footer div.siteCredit
+    position: absolute
+    right: 30px
+    bottom: 20px
+    font-weight: 600
+    font-size: 0.75em
+    @media phoneRule
+        position: relative
+        bottom:0
+        right:0
+        margin: 0px auto
+body > footer a i.icon
+    @media phoneRule
+        margin-top: 1em
+        width:40px
+        height: 40px
+        font-size: 1.6em
+        text-align: center
+
+
+
+
+
+
+.picturefill-background
+    overflow hidden
+    background-size: cover
+    background-position: 50% 50%
+.picturefill-background.containMob
+    @media mtrigger
+        background-size: contain
+        background-position: 50% 0
+        
+
+
+
+// content 
+*.fullH
+    min-height: fullH
+    @media mtrigger
+        min-height: fullH - navHeight
+*.largeH
+    min-height: largeH
+*.halfH
+    min-height: halfH
+*.smallH
+    min-height: smallH  
+
+
+
+
+
+
+// layout mods
+   
+.rC    
+    justify-content: center
+.rE    
+    justify-content: flex-end    
+.cC    
+    align-items: center 
+.cE    
+    align-items: flex-end        
+.tC
+    text-align: center
+.tR
+    text-align: right   
+
+
+
+
+
+
+
+
+
+
+
+// mobile nav
+.navHeight
+    height: navSpacer
+    @media tabletRule
+        height: navHeight
+
+#navMobile
+    position: fixed
+    bottom: marStd
+    right: marStd
+    z-index: 6000
+    display: none
+#navHeader
+    position: fixed
+    z-index: 7000
+    //background-color: blackAlp50
+    right:0
+    //border-bottom:1px solid halfDark
+    //width:100vw
+    //padding-left: padM*2
+    //padding-right: padM 
+    display: flex
+    align-items: center
+    justify-content: space-between
+    @media phoneRule
+        left 0
+        width 95vw
+        padding-left: 5vw
+        background-color: white
+#navHeader div#mblNavControl
+    display: flex 
+#navHeader div#mblNavControl a .icon-ic-menu:before
+    color: brand1mid
+#navHeader div#mblNavControl a .icon-ic-menu.darker:before
+    color: brand1
+div.mblnav
+    display: none;
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 6001
+    background-color: white
+div.mblnavContainer
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    /* The main point: */
+    overflow-y: auto
+    /* Optional but highly reccomended: enables momentum scrolling on iOS */
+    -webkit-overflow-scrolling: touch
+    //background-color: brand0
+.open
+    opacity: 1 !important
+div.containMNav
+    padding: padXL padXL
+div.containMNav nav
+    display: flex
+    flex-direction: column
+div.containMNav nav a
+    //padding: padM*1.5 padM 
+    line-height: 150%
+    font-size: 2em
+    font-weight 300
+    color: brand1
+    text-decoration: none
+    margin: 5px 0
+    padding-bottom: 10px
+    border-bottom: 1px solid brand1light
+    text-align: center
+    @media phoneRule
+        font-size: 1.5em
+    @media tabletRule
+        padding: padM
+div.containMNav a:link,
+div.containMNav a:visited
+    color: brand5 !important
+
+div.containMNav h6
+    font-size: 1em
+    margin-top: marStd
+    margin-bottom: marL
+
+html.noscroll 
+    overflow: hidden 
+body.noscroll
+    overflow: visible
+    height: 100%
+
+body.hasSlider
+    div.navHeight.hasSlider
+        display: none
+
+
+
+
+
+
+
+
+.inpageImage
+    transition: 0.35s
+    display: block
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+@media (pointer: fine)
+    a.inpageImage:hover
+        transform: scale(102%)
+@media (pointer: fine)
+    .gridItem .inpageImage:hover
+        transform: scale(102%)
+
+.inpageImage > div
+    position: relative
+.inpageImage > div.image200px
+    height:200px
+.inpageImage > div.image350px
+    height:350px
+.inpageImage > div.image550px
+    height:550px
+.inpageImage > div.image1000px
+    //height:50vw
+    height: 1000px
+
+
+.inpageImage .icon
+    position: absolute
+    right:0
+    bottom:0
+
+
+
+
+
+
+
+.container 
+    position: relative
+.base
+    position: absolute
+    width: 100%
+    height: 100%
+    @media dtrigger
+        position: fixed
+
+
+
+
+
+.forceFlex
+    display: flex
+    flex-wrap: wrap
+
+
+
+
+
+
+// articles
+
+main > article
+    //{test}
+
+article.content > div
+    display: flex
+    flex-wrap: nowrap
+    flex-direction: column
+    row-gap: 2em
+    @media dtrigger
+        display: flex
+        flex-wrap: nowrap
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        column-gap: 2em
+article.content section
+    text-align: center
+    @media dtrigger
+        flex: 0 1 60%
+        text-align: center
+        //text-wrap: balance
+article.content section.fullW
+    @media dtrigger
+        flex: 0 1 100%
+article.content section > div
+    @media phoneRule
+        padding: padM*2 0   
+    @media dtrigger
+        padding-top: padXS   
+        padding-bottom: padXS   
+        width:80%
+        margin: 0px auto
+article.content section > div.gridRows
+    @media dtrigger
+        padding-top: 0   
+        padding-bottom: 0   
+        width:auto
+        display: flex
+        flex-wrap: nowrap
+        flex-direction: row
+        justify-content: center
+        column-gap: 1em
+article.content section > div.gridRows.multiRow
+        flex-wrap: wrap
+        row-gap: marStd
+article.content section > div.gridRows div.gridItem
+    @media phoneRule
+        margin-bottom: marL
+    @media dtrigger
+        flex: 0 1 18%
+
+
+article.content section > div.gridRows picture
+    margin-bottom: marM
+    @media dtrigger
+        margin-bottom: marXS
+article.content section > div.gridRows a
+    color: brand1
+
+
+
+article.content.padXXL
+    padding: padXXL 0 
+    @media lgdesktopRule
+        padding: padL 0
+article.content.padXL
+    padding: padXL 0 
+    @media lgdesktopRule
+        padding: padL 0 
+article.content.padL
+    padding: padL 0 
+    @media lgdesktopRule
+        padding: padM 0  
+article.content.padM
+    padding: padM 0    
+    @media phoneRule
+        //padding: padM*2 0 
+article.content.padXS
+    padding: 2em 0    
+    @media phoneRule
+        //padding: padM*2 0   
+
+
+/*article.content:not(:first-of-type)
+    padding-top: 0*/

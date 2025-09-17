@@ -1,0 +1,252 @@
+/*!
+*
+*
+*
+*
+* start custom stylesheets
+*
+*
+*
+*
+*
+*/
+
+
+// vars
+brand1 = rgba(34,80,95,1.0) //#22505f
+brand2 = rgba(183,18,52,1.0) //#b71234
+
+brand1mid = rgba(178,193,198,1.0) //#b2c1c6
+brand1light = rgba(217,225,227,1.0) //#d9e1e3
+brand1lighter = rgba(225,237,239,1.0) //#e1edef
+
+
+/* class oveerrides */
+.brand1
+    color: brand1 !important
+.brand2
+    color: brand2 !important
+
+.brand1mid
+    color: brand1mid !important
+.brand1light
+    color: brand1light !important
+.brand1lighter
+     color: brand1lighter !important
+
+
+.brand1bg
+    background-color: brand1 !important
+.brand2bg
+    background-color: brand2 !important
+
+.brand1midBg
+    background-color: brand1mid !important
+.brand1lightBg
+    background-color: brand1light !important
+.brand1lighterBg
+    background-color: brand1lighter !important
+
+
+white = rgba(255,255,255,1.0)
+whiteAlp90 = rgba(255,255,255,0.9)
+whiteAlp75 = rgba(255,255,255,0.75)
+whiteAlp50 = rgba(255,255,255,0.5)
+whiteAlp25 = rgba(255,255,255,0.25)
+whiteAlp15 = rgba(255,255,255,0.15)
+whiteAlp10 = rgba(255,255,255,0.1)
+whiteAlp07 = rgba(255,255,255,0.07)
+whiteAlp05 = rgba(255,255,255,0.05)
+whiteAlp03 = rgba(255,255,255,0.03)
+
+black = rgba(0,0,0,1.0)
+blackAlp90 = rgba(0,0,0,0.90)
+blackAlp75 = rgba(0,0,0,0.75)
+blackAlp65 = rgba(0,0,0,0.65)
+blackAlp55 = rgba(0,0,0,0.55)
+blackAlp50 = rgba(0,0,0,0.5)
+blackAlp25 = rgba(0,0,0,0.25)
+blackAlp10 = rgba(0,0,0,0.1)
+blackAlp5 = rgba(0,0,0,0.05)
+
+halfDark = rgba(0,0,0,0.45)
+lightGrey = rgba(222,222,222,1.0)
+mainBG = rgba(245,245,245,1.0)
+
+
+padXXL = 20vw
+padXL = 15vw
+padL = 10vw
+padM = 7vw
+padStd = 5vw
+padXS = 3vw
+padXXS = 1vw
+
+marXL = 15vw
+marL = 10vw
+marM = 7vw
+marStd = 5vw
+marXS = 3vw
+marXXS = 1vw
+
+
+
+fontStack = "Montserrat-VR", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+//responsive breakpoint & media queries
+mBreakPoint = 750px
+tBreakPoint = 1100px
+sdBreakPoint = 1200px
+dBreakPoint = 1500px
+lgBreakPoint = 2100px
+
+phoneRule = "screen and (max-width: mBreakPoint )"
+tabletRule = "screen and (min-width: mBreakPoint) and (max-width: tBreakPoint )"
+desktopRule = "screen and (min-width: tBreakPoint) and (max-width: dBreakPoint )"
+lgdesktopRule = "screen and (min-width: lgBreakPoint)"
+
+smallDesktop = "screen and (min-width: mBreakPoint) and (max-width: sdBreakPoint )"
+
+
+mtrigger = "screen and (max-width: tBreakPoint )"
+ttrigger = "screen and (min-width: mBreakPoint )"
+dtrigger = "screen and (min-width: tBreakPoint )"
+
+phLandscape = "screen and (max-width: mBreakPoint) and (orientation: landscape)"
+tbLandscape = "screen and (min-width: mBreakPoint) and (max-width: tBreakPoint) and (orientation: landscape)"
+
+ie = "all and (-ms-high-contrast: none), (-ms-high-contrast: active)"
+
+$hideItAll = none !important
+
+// responsive logos
+logoDimens = 40vw
+
+
+// misc blocks
+marginNo = @block {
+    margin: 0
+}
+marginM = @block {
+    margin-bottom: 2vh
+}
+marginL = @block {
+    margin-left: 2vw
+}
+marginR = @block {
+    margin-right: 2vw
+}
+marginT = @block {
+    margin-bottom: 4vh
+}
+marginBT = @block {
+    margin-bottom: 1.5vh
+}
+marginVT = @block {
+    margin-top: 2vh
+    margin-bottom: 2vh
+}
+marginALL = @block {
+    margin: 2vh
+}
+wh100 = @block {
+    width:100%
+    height:100%
+}
+test = @block {
+    border:1px solid cyan
+}
+borderBtm = @block {
+    border-bottom: 1px solid brand1
+}
+
+
+
+// heights
+fullH = 100vh
+largeH = 80vh
+halfH = 50vh
+smallH = 25vh
+
+navHeight = 5vh
+navHeightL = 11vh
+navSpacer = 7vh
+navSpacerL = 15vh
+
+
+
+// basic defaults
+html, body
+    width: 100%
+    height: 100%
+    font-family: fontStack
+body
+    font-size: 16px
+    // background: linear-gradient(top, white, brand1)
+body
+    background-color: white
+    color: brand1
+
+
+hr
+    border: none
+    border-bottom: 1px solid brand1
+    margin:0
+
+hr.small
+    border-bottom: 2px solid brand1
+    width:100px 
+.reverse hr
+    border-bottom: 1px solid white
+
+.noPad
+    padding: 0 !important
+// blend modes
+
+.nowrap 
+    text-wrap: nowrap
+
+.noPadBottom
+    padding-bottom: 0 !important
+.noPadTop
+    padding-top: 0 !important
+.noPadRight
+    padding-right: 0 !important
+.noPadLeft
+    padding-left: 0 !important
+
+.bgPosBottom
+    background-position: -1px 100%
+
+
+span.spacer
+    display: block
+span.spacer5
+    height: 5vh
+span.spacer7
+    height: 7vh
+span.spacer10
+    height: 10vh
+span.spacer15
+    height: 15vh
+span.spacer20
+    height: 20vh
+span.spacer25
+    height: 25vh
+@media phoneRule
+    span.spacer7
+        height: 7vw
+    span.spacer10
+        height: 10vw
+
+.centerMe
+    margin: 0px auto
+
+.padMe
+    padding: padXS
+    @media phoneRule
+        padding: padM
+
+
+.alignEnd
+    align-self: flex-end
