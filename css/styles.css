@@ -653,6 +653,9 @@ article.content section {
     margin: 0px auto;
   }
 }
+article.content div.fullW {
+  width: 90%;
+}
 @media screen and (min-width: 1100px) {
   article.content section > div.gridRows {
     padding-top: 0;
@@ -758,6 +761,9 @@ article.content.padL {
 }
 article.content.padM {
   padding: 7vw 0;
+}
+article.content.padStd {
+  padding: 5vw 0;
 }
 article.content.padXS {
   padding: 2em 0;
@@ -2410,6 +2416,43 @@ i.dot {
   border-radius: 100%;
   margin: 0px auto;
 }
+div.maskImageWithLogo {
+  width: 250px;
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 100%;
+  overflow: hidden;
+  background-color: #22505f;
+  margin: 0px auto;
+  position: relative;
+}
+div.maskImageWithLogo > img {
+  height: 100%;
+  width: auto;
+}
+div.maskImageWithLogo > span {
+  height: 44%;
+  width: 44%;
+  display: block;
+  border-radius: 100%;
+  border: 20px solid #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 @-webkit-keyframes rotateSlow {
   0% {
     -webkit-transform-origin: center;
@@ -2656,7 +2699,7 @@ h4 {
   letter-spacing: 0.15em;
 }
 h5 {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1em;
   text-transform: uppercase;
   line-height: 1.3em;
@@ -2670,7 +2713,7 @@ h6 {
   color: #b2c1c6;
 }
 p {
-  font-weight: 400;
+  font-weight: 450;
   font-size: 0.95em;
   line-height: 1.6em;
   letter-spacing: -0.01em;
@@ -2706,7 +2749,7 @@ p {
     letter-spacing: 0.15em;
   }
   h5 {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1em;
     text-transform: uppercase;
     line-height: 1.05em;
@@ -2720,7 +2763,7 @@ p {
     color: #b2c1c6;
   }
   p {
-    font-weight: 400;
+    font-weight: 450;
     font-size: 0.9em;
     line-height: 1.6em;
     letter-spacing: -0.01em;
@@ -2745,7 +2788,8 @@ strong {
 .small {
   font-size: 0.95em;
 }
-.balanced {
+.balanced,
+div.fullW p {
   text-wrap: balance;
 }
 body > footer {

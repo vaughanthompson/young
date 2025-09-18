@@ -1259,3 +1259,32 @@ i.dot
     background-color: brand1
     border-radius: 100%
     margin: 0px auto
+
+div.maskImageWithLogo
+    width:250px;
+    height:250px;
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 100%
+    overflow: hidden
+    background-color: brand1
+    margin: 0px auto
+    position: relative
+
+div.maskImageWithLogo > img
+    height: 100%
+    width: auto
+
+div.maskImageWithLogo > span
+    height: 44%
+    width: 44%
+    display: block
+    border-radius: 100%
+    border: 20px solid white
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+
+    
