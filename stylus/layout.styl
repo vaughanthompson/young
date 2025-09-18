@@ -173,7 +173,7 @@ body > footer a i.icon
     display: flex
     align-items: center
     justify-content: space-between
-    @media phoneRule
+    @media mtrigger
         left 0
         width 95vw
         padding-left: 5vw
@@ -274,7 +274,6 @@ body.hasSlider
 .inpageImage > div.image550px
     height:550px
 .inpageImage > div.image1000px
-    //height:50vw
     height: 1000px
 
 
@@ -321,26 +320,33 @@ article.content > div
     flex-wrap: nowrap
     flex-direction: column
     row-gap: 2em
-    @media dtrigger
+    @media ttrigger
         display: flex
         flex-wrap: nowrap
         flex-direction: row
         justify-content: center
         align-items: center
         column-gap: 2em
+article.content.flip > div
+    @media ttrigger
+        flex-direction: row-reverse
+article.content.alignTop > div
+    align-items: flex-start
+
 article.content section
+    width: 100%
     text-align: center
-    @media dtrigger
+    @media ttrigger
         flex: 0 1 60%
         text-align: center
         //text-wrap: balance
 article.content section.fullW
-    @media dtrigger
+    @media ttrigger
         flex: 0 1 100%
 article.content section > div
     @media phoneRule
         padding: padM*2 0   
-    @media dtrigger
+    @media ttrigger
         padding-top: padXS   
         padding-bottom: padXS   
         width:80%
@@ -372,6 +378,14 @@ article.content section > div.gridRows picture
 article.content section > div.gridRows a
     color: brand1
 
+
+article.threeCol > div
+    flex-wrap: wrap
+article.threeCol section
+    @media tabletRule
+        flex-basis: 40%
+    @media dtrigger
+        flex-basis: 30%
 
 
 article.content.padXXL

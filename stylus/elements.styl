@@ -1212,3 +1212,50 @@ div.item.rev:not(a)
 .containSlider div.forceFlex div
     @media phoneRule
         padding-bottom: padM
+
+
+
+
+/* centre border */
+div.centerLine
+    width 50px
+    margin: 0px auto   
+div.centerLine.rotated
+    width:170px
+    display: flex
+    flex-wrap: nowrap
+    align-items: center
+div.centerLine.rotated > *
+    flex: 0 0 auto
+div.centralSpineSmall
+    margin: 0px auto
+    width: 50px
+    display: flex
+    flex-direction: column
+    flex-wrap: nowrap
+    height:80px
+    align-items: center
+    @media phoneRule
+        //height:15vh
+div.centerLine.rotated div.centralSpineSmall
+    flex-direction: row
+    width:80px
+
+span.pipe 
+    display: block
+    width:2px
+    height:100%
+    align-self: center
+    background-color: brand1
+    //box-shadow: 0 0 0 2px brand1
+div.centerLine.rotated span.pipe
+    width: 100%
+    height: 2px
+
+i.dot
+    display: block
+    width 10px
+    height: 10px
+    background-color: brand1
+    border-radius: 100%
+    margin: 0px auto
