@@ -166,13 +166,13 @@
             // alert('Enter triggered with direction ' + direction)
             },
             entered: function(direction) {     
-                $(this[0,'element']).find('.onOffTarget').removeClass('stateInactive');                            
-                $(this[0,'element']).find('.onOffTarget').addClass('stateActive');
+                //$(this[0,'element']).find('.onOffTarget').removeClass('stateInactive');                            
+                $(this[0,'element']).find('.onOffTarget').addClass('fadeIn');
                     
             },
             exit: function(direction) {
-                $(this[0,'element']).find('.onOffTarget').removeClass('stateActive');                            
-                $(this[0,'element']).find('.onOffTarget').addClass('stateInactive');
+                //$(this[0,'element']).find('.onOffTarget').removeClass('fadeIn');                            
+                //$(this[0,'element']).find('.onOffTarget').addClass('stateInactive');
             },
             exited: function(direction) {
                 // alert('Exited triggered with direction ' + direction)

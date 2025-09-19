@@ -2464,6 +2464,11 @@ div.maskImageWithLogo > span {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+div.maskImageWithLogo > span.onOffTarget {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
 @-webkit-keyframes rotateSlow {
   0% {
     -webkit-transform-origin: center;
