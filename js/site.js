@@ -181,5 +181,56 @@
     });
 
 
+
+    //process page animations
+    $('.process1').delay(1000).fadeTo(2500,0.1);
+
+    $('.processTrigger1').each(function() {
+        var inview = new Waypoint.Inview({element: this,
+        entered: function(direction) {
+            $('.process2, .process3, .process4, .process5, .process6, .process7').stop(true, true).fadeTo(250,0);
+        }
+        })
+    });
+
+    $('.processTrigger2').each(function() {
+        var inview = new Waypoint.Inview({element: this,
+        entered: function(direction) {$('.process2').delay(0).fadeTo(750,1);}
+        })
+    });
+
+    $('.processTrigger3').each(function() {
+        var inview = new Waypoint.Inview({element: this,
+        entered: function(direction) {$('.process3').delay(0).fadeTo(750,1);}
+        })
+    });
+
+    $('.processTrigger4').each(function() {
+        var inview = new Waypoint.Inview({element: this,
+        entered: function(direction) {$('.process4').delay(0).fadeTo(750,1);}
+        })
+    });
+
+    $('.processTrigger5').each(function() {
+        var inview = new Waypoint.Inview({element: this,
+        entered: function(direction) {$('.process5').delay(0).fadeTo(750,1);}
+        })
+    });
+
+    $('.processTrigger6').each(function() {
+        var inview = new Waypoint.Inview({element: this,
+        entered: function(direction) {$('.process6').delay(0).fadeTo(750,1);}
+        })
+    });
+
+    $('.processTrigger7').each(function() {
+        var inview = new Waypoint.Inview({element: this,
+        entered: function(direction) {$('.process7').delay(0).fadeTo(750,1);}
+        })
+    });
+    
+    
+
+
 });
 

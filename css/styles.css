@@ -2469,6 +2469,45 @@ div.maskImageWithLogo > span.onOffTarget {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
 }
+div.centralDevice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 40vw;
+  height: 40vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  -ms-filter: none;
+  -webkit-filter: none;
+          filter: none;
+  -webkit-transition: 5s;
+  transition: 5s;
+}
+img.process {
+  position: absolute;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+img.process1 {
+  opacity: 1;
+  -ms-filter: none;
+  -webkit-filter: none;
+          filter: none;
+}
 @-webkit-keyframes rotateSlow {
   0% {
     -webkit-transform-origin: center;
@@ -3062,6 +3101,9 @@ body > footer a.activeLink {
     padding-left: 7vw;
     padding-right: 7vw;
   }
+}
+.restrictWidthTighter {
+  max-width: 1000px;
 }
 @media screen and (min-width: 1100px) {
   .m {
