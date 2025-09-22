@@ -327,6 +327,11 @@ article.content > div
         justify-content: center
         align-items: center
         column-gap: 2em
+div.profileDetails article.content > div
+    @media ttrigger
+        display: block
+    @media dtrigger
+        display: flex
 article.content.flip > div
     @media ttrigger
         flex-direction: row-reverse
@@ -351,6 +356,13 @@ article.content section > div
         padding-bottom: padXS   
         width:80%
         margin: 0px auto
+div.profileDetails article.content section:first-of-type > div
+    @media mtrigger
+        padding-bottom: 0
+div.profileDetails article.content section:last-of-type > div
+    @media mtrigger
+        padding-top: 0
+
 article.content div.fullW
     width:90%
 article.content section > div.gridRows
@@ -423,6 +435,18 @@ article.content.padXS
     @media phoneRule
         //padding: padM*2 0   
 
+
+
+article.content section > div.gridRows.noGap
+    @media dtrigger
+        margin-left: 2em
+        margin-right: 2em
+article.content section > div.gridRows.noGap div.gridItem
+    @media dtrigger
+        flex: 1 1 auto
+
+.noGap 
+    column-gap: 0 !important
 
 /*article.content:not(:first-of-type)
     padding-top: 0*/

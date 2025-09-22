@@ -187,7 +187,7 @@
 
     $('.processTrigger1').each(function() {
         var inview = new Waypoint.Inview({element: this,
-        entered: function(direction) {
+        enter: function(direction) {
             $('.process2, .process3, .process4, .process5, .process6, .process7').stop(true, true).fadeTo(250,0);
         }
         })
@@ -230,6 +230,60 @@
     });
     
     
+
+
+
+
+
+
+
+
+
+    $('.profileTrigger').click(function(){
+    //$(this).hide();
+    $('.profiles .activeDownArrow').addClass('inActive');
+    $('.profiles picture').addClass('greyscale');
+    $('.profileDetails > article').hide();
+    $(this).find('picture').removeClass('greyscale');
+    //$('.profiles picture').addClass('greyscale');
+    return false;
+    });
+
+
+    $('.profileTrigger1').click(function(){
+    $('.profiles .activeDownArrow1').removeClass('inActive');
+    $('.profileDetails > article.profile1').show();
+    return false;
+    });
+    
+
+    $('.profileTrigger2').click(function(){
+    $('.profiles .activeDownArrow2').removeClass('inActive');
+    $('.profileDetails > article.profile2').show();
+    return false;
+    });
+
+    $('.profileTrigger3').click(function(){
+    $('.profiles .activeDownArrow3').removeClass('inActive');
+    $('.profileDetails > article.profile3').show();
+    return false;
+    });
+
+    $('.profileTrigger4').click(function(){
+    $('.profiles .activeDownArrow4').removeClass('inActive');
+    $('.profileDetails > article.profile4').show();
+    return false;
+    });
+
+    $('.profileTrigger5').click(function(){
+    $('.profiles .activeDownArrow5').removeClass('inActive');
+    $('.profileDetails > article.profile5').show();
+    return false;
+    });
+
+
+
+
 
 
 });

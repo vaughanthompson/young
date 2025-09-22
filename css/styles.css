@@ -76,6 +76,9 @@
 .brand1lighterBg {
   background-color: #e1edef !important;
 }
+.whiteBg {
+  background-color: #fff !important;
+}
 html,
 body {
   width: 100%;
@@ -602,6 +605,19 @@ article.content > div {
   }
 }
 @media screen and (min-width: 750px) {
+  div.profileDetails article.content > div {
+    display: block;
+  }
+}
+@media screen and (min-width: 1100px) {
+  div.profileDetails article.content > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+  }
+}
+@media screen and (min-width: 750px) {
   article.content.flip > div {
     -webkit-box-direction: reverse;
     -o-box-direction: reverse;
@@ -651,6 +667,16 @@ article.content section {
     padding-bottom: 3vw;
     width: 80%;
     margin: 0px auto;
+  }
+}
+@media screen and (max-width: 1100px) {
+  div.profileDetails article.content section:first-of-type > div {
+    padding-bottom: 0;
+  }
+}
+@media screen and (max-width: 1100px) {
+  div.profileDetails article.content section:last-of-type > div {
+    padding-top: 0;
   }
 }
 article.content div.fullW {
@@ -778,6 +804,26 @@ article.content.padStd {
 }
 article.content.padXS {
   padding: 2em 0;
+}
+@media screen and (min-width: 1100px) {
+  article.content section > div.gridRows.noGap {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+}
+@media screen and (min-width: 1100px) {
+  article.content section > div.gridRows.noGap div.gridItem {
+    -webkit-box-flex: 1;
+    -o-box-flex: 1;
+    box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+}
+.noGap {
+  -webkit-column-gap: 0 !important;
+  -moz-column-gap: 0 !important;
+  column-gap: 0 !important;
 }
 .icon {
   color: #fff;
@@ -2508,6 +2554,34 @@ img.process1 {
   -webkit-filter: none;
           filter: none;
 }
+.activeDownArrow {
+  width: 100%;
+  display: block;
+  background-color: #fff;
+}
+.activeDownArrow > span {
+  font-size: 1em;
+  vertical-align: middle;
+  display: inline-block;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.activeDownArrow.inActive {
+  height: 0.5em;
+  background: none;
+  border-bottom: 1px solid #b2c1c6;
+}
+.activeDownArrow.inActive > span {
+  display: none;
+}
+@media screen and (min-width: 1100px) {
+  .profileDetails > article {
+    display: none;
+  }
+}
+.profileDetails > article.profile1 {
+  display: block;
+}
 @-webkit-keyframes rotateSlow {
   0% {
     -webkit-transform-origin: center;
@@ -2743,14 +2817,14 @@ h3 {
   font-weight: 700;
   font-size: 1.1em;
   text-transform: uppercase;
-  line-height: 1.05em;
+  line-height: 1.1em;
   letter-spacing: 0.15em;
 }
 h4 {
   font-weight: 400;
   font-size: 1.1em;
   text-transform: uppercase;
-  line-height: 1.05em;
+  line-height: 1.1em;
   letter-spacing: 0.15em;
 }
 h5 {
@@ -2793,14 +2867,14 @@ p {
     font-weight: 700;
     font-size: 1.1em;
     text-transform: uppercase;
-    line-height: 1.05em;
+    line-height: 1.1em;
     letter-spacing: 0.15em;
   }
   h4 {
     font-weight: 400;
     font-size: 1.1em;
     text-transform: uppercase;
-    line-height: 1.05em;
+    line-height: 1.1em;
     letter-spacing: 0.15em;
   }
   h5 {
@@ -2906,6 +2980,9 @@ body > footer a.activeLink {
 .balanced {
   text-wrap: balanced;
 }
+.noUppercase {
+  text-transform: none;
+}
 .responsiveLarge {
   font-size: 6vw;
   line-height: 95%;
@@ -2987,11 +3064,8 @@ body > footer a.activeLink {
           filter: grayscale(80%);
 }
 .greyscale {
-  background-color: rgba(0,0,0,0.3);
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 .greyscaleLt {
   -webkit-filter: grayscale(0%);
@@ -3017,14 +3091,8 @@ body > footer a.activeLink {
   background: linear-gradient(to top, rgba(0,0,0,0.05), rgba(255,255,255,0));
 }
 .gradient2 {
-  background-blend-mode: multiply;
-  background: -webkit-gradient(linear, right bottom, left top, from(#000), color-stop(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.1)));
-  background: linear-gradient(to left top, #000, rgba(0,0,0,0.5), rgba(0,0,0,0.1));
-}
-@media screen and (max-width: 750px) {
-  .gradient2 {
-    background: #22505f;
-  }
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0)), color-stop(rgba(255,255,255,0.5)), to(#fff));
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.5), #fff);
 }
 .gradient3 {
   background-blend-mode: multiply;

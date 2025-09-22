@@ -1312,3 +1312,30 @@ img.process
 
 img.process1
     opacity: 1
+
+
+.activeDownArrow
+    width: 100%
+    display: block
+    background-color: white
+
+.activeDownArrow > span
+    font-size: 1em
+    vertical-align: middle
+    display: inline-block
+    transform: rotate(90deg)
+
+.activeDownArrow.inActive
+    height: 0.5em
+    background: none
+    border-bottom:1px solid brand1mid
+
+.activeDownArrow.inActive > span
+    display: none
+
+.profileDetails > article
+    @media dtrigger
+        display: none
+
+.profileDetails > article.profile1
+    display: block
