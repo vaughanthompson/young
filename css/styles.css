@@ -536,6 +536,12 @@ body.hasSlider div.navHeight.hasSlider {
   right: 0;
   bottom: 0;
 }
+@media screen and (max-width: 1100px) {
+  .inpageImage.m {
+    max-width: 350px;
+    margin: 0px auto;
+  }
+}
 .container {
   position: relative;
 }
