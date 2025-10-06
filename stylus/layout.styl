@@ -382,7 +382,7 @@ article.content section > div.gridRows.multiRow
         flex-wrap: wrap
         row-gap: marStd
 article.content section > div.gridRows div.gridItem
-    @media phoneRule
+    @media mtrigger
         margin-bottom: marL
     @media dtrigger
         flex: 0 1 18%
@@ -397,6 +397,8 @@ article.content section.videoHolder > div
 
 article.content section > div.gridRows picture
     margin-bottom: marM
+    @media mtrigger
+        height: 40vh
     @media dtrigger
         margin-bottom: marXS
 article.content section > div.gridRows a

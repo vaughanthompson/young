@@ -723,7 +723,7 @@ article.content section > div.gridRows.multiRow {
   flex-wrap: wrap;
   row-gap: 5vw;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1100px) {
   article.content section > div.gridRows div.gridItem {
     margin-bottom: 10vw;
   }
@@ -750,6 +750,11 @@ article.content section.videoHolder > div {
 }
 article.content section > div.gridRows picture {
   margin-bottom: 7vw;
+}
+@media screen and (max-width: 1100px) {
+  article.content section > div.gridRows picture {
+    height: 40vh;
+  }
 }
 @media screen and (min-width: 1100px) {
   article.content section > div.gridRows picture {
